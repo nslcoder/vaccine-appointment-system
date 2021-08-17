@@ -3,23 +3,23 @@ const fs = require('fs');
 
 function genPDF(data, apptID) {
     let doc = new pdfGenerator();
-    
+
     const { name, birthdate, gender, email, mobile, address, vaxstation, vaxdate } = data;
 
     const fromEdge = 5;
     doc.rect(fromEdge, fromEdge, doc.page.width - fromEdge * 2, doc.page.height - fromEdge * 2).stroke()
-    
+
     doc.fontSize(36).font('Times-Bold').text('Vaccine Appointment', {
         align: 'center'
     });
     doc.moveDown();
-    
+
     doc.fontSize(20).text(apptID, {
         align: 'center',
         characterSpacing: 2
     });
     doc.moveDown();
-    
+
     doc.fontSize(14).font('Times-Roman')
         .text('Name:', 100, 200)
         .text(name, 250, 200)
@@ -41,12 +41,12 @@ function genPDF(data, apptID) {
         .moveDown()
         .moveDown()
         .moveDown();
-    
+
     doc.font('Times-Bold').text('Notes: Please show this document to get the vaccine. Both digital and hard copies are acceptable.', 100);
-    
+
     doc.end();
 
-    doc.pipe(fs.createWriteStream(`../../pdffiles/${name}.pdf`));
+    doc.pipe(fs.createWriteStream(`pdffiles/${name.split(' ').join('').toLowerCase()}.pdf`));
 };
 
 module.exports = { genPDF };
