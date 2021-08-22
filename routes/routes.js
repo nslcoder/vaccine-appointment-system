@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const { createAppointment } = require('../controllers/controllers');
+const { createAppointment, getAppointment } = require('../controllers/controllers');
 
 router.get('/', (req, res) => {
     res.render('index');
 });
+
+router.get('/appointments/:appointName', getAppointment);
 
 router.post('/appointments', createAppointment);
 
