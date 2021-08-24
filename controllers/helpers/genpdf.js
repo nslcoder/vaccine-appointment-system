@@ -46,7 +46,7 @@ function genPDF(data, apptID) {
 
     doc.end();
 
-    doc.pipe(fs.createWriteStream(`pdffiles/${name.split(' ').join('').toLowerCase()}.pdf`));
+    doc.pipe(fs.createWriteStream(`pdfstorage/${name.split(' ').join('').toLowerCase()}.pdf`));
 };
 
 module.exports = { genPDF };
