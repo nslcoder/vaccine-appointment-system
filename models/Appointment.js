@@ -7,7 +7,7 @@ const AppointmentSchema = new Schema({
         required: true
     },
     birthdate: {
-        type: String,
+        type: Date,
         required: true
     },
     gender: {
@@ -19,7 +19,7 @@ const AppointmentSchema = new Schema({
         required: true
     },
     mobile: {
-        type: String,
+        type: Number,
         required: true
     },
     address: {
@@ -31,14 +31,14 @@ const AppointmentSchema = new Schema({
         required: true
     },
     vaxdate: {
-        type: String,
+        type: Date,
         required: true
     },
     medcond: {
         type: Schema.Types.Mixed
     },
     agreed: {
-        type: String,
+        type: Boolean,
         required: true
     },
     apptID: {
