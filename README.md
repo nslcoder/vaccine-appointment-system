@@ -22,7 +22,7 @@ On the backend, your form data is deconstructed and a unique ID is generated. Us
 
 
 ## Sample Appointment PDF
-![Sample Appointment PDF](https://github.com/nslcoder/vaccine-appointment-system/blob/main/sample-vax-appointment.pdf)
+![Sample Appointment PDF](https://github.com/nslcoder/vaccine-appointment-system/blob/main/screenshots/sample-vax-appointment.png)
 
 ## License
 This project uses [the MIT License](https://github.com/nslcoder/vaccine-appointment-system/blob/main/LICENSE.md).
