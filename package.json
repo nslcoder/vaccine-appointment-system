@@ -4,7 +4,7 @@
   "description": "A basic vaccine appointment system",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "author": "nslcoder",
   "license": "MIT",
