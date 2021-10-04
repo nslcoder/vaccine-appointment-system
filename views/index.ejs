@@ -8,130 +8,29 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="bg-gray-100 p-5 flex flex-col items-center">
-        <header class="mb-5">
-          <h1 class="font-bold text-5xl text-center">VAS</h1>
-          <h2 class="font-semibold text-lg text-center">Vaccine Appointment System</h2>
-        </header>
-      
-        <form action="/appointments" method="post" class="border-2 rounded shadow-lg p-5 bg-white sm:w-7/12 md:w-6/12 lg:w-4/12">
-          <div class="mb-5">
-            <label for="name" class="mb-5">Name</label>
-            <input type="text" id="name" name="name" required class="block rounded w-full" placeholder="Ram Tamang" />
-          </div>
-      
-          <div class="mb-5">
-            <label for="birthdate" class="mb-5">Date of Birth</label>
-            <input type="date" id="birthdate" name="birthdate" required class="block rounded w-full" />
-          </div>
-      
-          <div class="mb-5">
-            <label for="gender">Gender</label>
-            <select name="gender" id="gender" required class="block rounded w-full">
-              <option>Male</option>
-              <option>Female</option>
-              <option>Other</option>
-            </select>
-          </div>
-      
-          <div class="mb-5">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required class="block rounded w-full" placeholder="ramtamang@gmail.com" />
-          </div>
-      
-          <div class="mb-5">
-            <label for="mobile">Mobile No</label>
-            <input type="tel" id="mobile" name="mobile" required class="block rounded w-full" placeholder="9812345678" />
-          </div>
-      
-          <div class="mb-5">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" required class="block rounded w-full" placeholder="Ward No 4, Kathmandu, Bagmati" />
-          </div>
-      
-          <div class="mb-5"">
-            <label for="vaxstation">Vaccine Station</label>
-              <select name="vaxstation" id="vaxstation" class="block rounded w-full">
-                <option>T.U. Teaching Hospital</option>
-                <option>Om Hospital</option>
-                <option>Patan Hospital</option>
-                <option>Bir Hospital</option>
-                <option>Bhaktapur Hospital</option>
-              </select>
-          </div>
-      
-          <div class="mb-5">
-            <label for="vaxdate" class="mb-5">Vaccine Date</label>
-            <input type="date" id="vaxdate" name="vaxdate" required class="block rounded w-full" />
-          </div>
+  <div class="bg-gray-100 h-screen p-5 flex flex-col items-center">
+    <header class="mb-5">
+      <h1 class="font-bold text-5xl text-center">VAS</h1>
+      <h2 class="font-semibold text-lg text-center">Vaccine Appointment System</h2>
+    </header>
+  
+    <form action="" method="post" class="border-2 rounded shadow-lg p-5 bg-white">
+        <div class="mb-5">
+            <label for="email" class="mb-5">Email</label>
+            <input type="email" id="email" name="email" required class="block rounded w-full" placeholder="ramtamang@example.com" />
+        </div>
 
-          <fieldset class="mb-5">
-            <legend>What's your medical condition?</legend>
-            <div>
-              <input type="checkbox" id="normal" name="medcond" value="normal">
-              <label for="normal">Normal</label>
-            </div>
-            <div>
-              <input type="checkbox" id="bp" name="medcond" value="bp">
-              <label for="bp">Blood Pressure</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cancer" name="medcond" value="cancer">
-              <label for="cancer">Cancer</label>
-            </div>
-            <div>
-              <input type="checkbox" id="chronic-kidney" name="medcond" value="chronic-kidney">
-              <label for="chronic-kidney">Chronic Kidney Disease</label>
-            </div>
-            <div>
-              <input type="checkbox" id="lung-disease" name="medcond" value="lung-disease">
-              <label for="lung-disease">Lung Disease</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cardio-disease" name="medcond" value="cardio-disease">
-              <label for="cardio-disease">Cardio Related Disease</label>
-            </div>
-            <div>
-              <input type="checkbox" id="diabetes" name="medcond" value="diabetes">
-              <label for="diabetes">Diabetes</label>
-            </div>
-            <div>
-              <input type="checkbox" id="neuro-disease" name="medcond" value="neuro-disease">
-              <label for="neuro-disease">Neuro Related Disease</label>
-            </div>
-            <div>
-              <input type="checkbox" id="tuberculosis" name="medcond" value="tuberculosis">
-              <label for="tuberculosis">Tuberculosis</label>
-            </div>
-            <div>
-              <input type="checkbox" id="mental-disease" name="medcond" value="mental-disease">
-              <label for="mental-disease">Mental Disease</label>
-            </div>
-            <div>
-              <input type="checkbox" id="aids" name="medcond" value="aids">
-              <label for="aids">AIDS</label>
-            </div>
-            <div>
-              <input type="checkbox" id="covid-19" name="medcond" value="covid-19">
-              <label for="covid-19">Covid-19</label>
-            </div>
-            <div>
-              <input type="checkbox" id="others" name="medcond" value="others">
-              <label for="others">Others</label>
-            </div>
-          </fieldset>
-      
-          <div class="mb-5">
-            <input type="checkbox" id="agreed" name="agreed" value="true" required>
-            <label for="agreed">I agree the above information is correct.</label>
-          </div>
-      
-          <div class="w-full text-center">
-            <button class="bg-green-400 p-2 font-bold text-lg text-white rounded w-36">Submit</button>
-          </div>
-        </form>
-      
-        <p class="mt-5 text-center">Made with dedication by <a href="https://nslcoder.github.io/" target="_blank" rel="noopener" class="text-blue-600">nslcoder</a> (Lokesh Gurung) for learning.</p>
-      </div>      
+        <div class="mb-5">
+            <label for="password" class="mb-5">Password</label>
+            <input type="password" id="password" name="password" required class="block rounded w-full" />
+        </div>
+
+        <div class="w-full text-center">
+            <button class="bg-green-400 p-2 font-bold text-lg text-white rounded w-full">Submit</button>
+        </div>
+    </form>
+
+    <p class="mt-5 text-center">Made with dedication by <a href="https://nslcoder.github.io/" target="_blank" rel="noopener" class="text-blue-600">nslcoder</a> (Lokesh Gurung) for learning.</p>
+  </div>    
 </body>
 </html>
