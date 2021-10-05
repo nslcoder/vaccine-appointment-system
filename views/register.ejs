@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAS - Register an Account</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="bg-gray-100 h-screen p-5 flex flex-col items-center">
+        <header class="mb-5">
+          <h1 class="font-bold text-5xl text-center">VAS</h1>
+          <h2 class="font-semibold text-lg text-center">Vaccine Appointment System</h2>
+        </header>
+      
+
+        <div class="border-2 rounded shadow-lg p-5 bg-white">
+            <h3 class="font-bold text-lg text-center mb-5">Register an Account</h3>
+
+            <form action="" method="post" class="mb-8">
+                <div class="mb-5">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required class="block rounded w-full mt-1" placeholder="Ram Tamang" />
+                </div>
+
+                <div class="mb-5">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required class="block rounded w-full mt-1" placeholder="ramtamang@example.com" />
+                </div>
+    
+                <div class="mb-5">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required class="block rounded w-full mt-1" placeholder="************" />
+                </div>
+    
+                <div class="w-full text-center">
+                    <button class="bg-green-400 p-2 font-bold text-lg text-white rounded w-full">Submit</button>
+                </div>
+            </form>
+
+            <div class="border-t border-gray-600 pt-5">
+                <a class="text-blue-600" href="/" target="_blank" rel="noopener">Already have an account? Sign in</a>
+            </div>
+        </div>
+
+        <p class="mt-5 text-center">Made with dedication by <a href="https://nslcoder.github.io/" target="_blank" rel="noopener" class="text-blue-600">nslcoder</a> (Lokesh Gurung) for learning.</p>
+    </div>
+</body>
+</html>
