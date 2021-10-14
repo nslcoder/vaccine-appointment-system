@@ -1,10 +1,10 @@
 const pdfGenerator = require('pdfkit');
 const fs = require('fs');
 
-function genPDF(data, apptID) {
+function genPDF(apptData, apptID) {
     let doc = new pdfGenerator();
 
-    const { name, birthdate, gender, email, mobile, address, vaxstation, vaxdate } = data;
+    const { name, email, birthdate, gender, mobile, address, vaxstation, vaxdate } = apptData;
 
     const fromEdge = 5;
     doc.rect(fromEdge, fromEdge, doc.page.width - fromEdge * 2, doc.page.height - fromEdge * 2).stroke()

@@ -6,7 +6,9 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 const bcrypt = require('bcrypt');
+const methodOverride = require('method-override');
 
+const User = require('./models/User');
 const allRoutes = require('./routes/routes');
 
 // Specify the passport strategy to use 
@@ -48,11 +50,12 @@ const dbURL = process.env.MONGODBURL;
 app.set('view engine', 'ejs');
 
 // Specify middlewares 
+app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
-    secrte: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));

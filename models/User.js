@@ -42,7 +42,7 @@ const UserSchema = new Schema({
         apptID: {
             type: String,
         },
-        appointName: {
+        username: {
             type: String,
         }
     }
