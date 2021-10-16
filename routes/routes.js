@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const connectEnsureLogin = require('connect-ensure-login');
 
-const { renderIndex, renderRegister, accessDashboard, renderDashboard, registerUser, renderAppointment, createAppointment, renderEdit, editAppointment, getAppointment, logoutUser } = require('../controllers/controllers');
+const { renderIndex, renderRegister, accessDashboard, renderDashboard, registerUser, renderAppointment, createAppointment, renderEdit, editAppointment, getAppointment, logoutUser, render404 } = require('../controllers/controllers');
 
 router.get('/', renderIndex);
 
@@ -26,5 +26,7 @@ router.put('/users/dashboard/appointments/:username/:userId', connectEnsureLogin
 router.get('/users/appointments/pdf/:username/:userId', connectEnsureLogin.ensureLoggedIn('/'), getAppointment);
 
 router.get('/users/logout', connectEnsureLogin.ensureLoggedIn('/'), logoutUser);
+
+router.get('/*', render404);
 
 module.exports = router;
