@@ -9,6 +9,10 @@
 </head>
 <body>
     <div class="bg-gray-100 p-5 flex flex-col items-center">
+      <header class="mb-5">
+        <h2 class="font-semibold text-lg text-center">Edit your appointment</h2>
+      </header>
+
         <form action="/users/dashboard/appointments/<%= appointment.username %>/<%= userId %>?_method=PUT" method="post" class="border-2 rounded shadow-lg p-5 bg-white sm:w-7/12 md:w-6/12 lg:w-4/12">      
           <div class="mb-5">
             <label for="birthdate" class="mb-5">Date of Birth</label>
