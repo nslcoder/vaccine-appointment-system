@@ -20,11 +20,15 @@ It's a simple system where you can make an appointment for your vaccine.
 - pdfkit
 - uniqid
 
-## How It Works:
+## What It Does:
 
-Fill up the appointment form and submit. You are then taken to your appointment PDF file. It has important details such as name, gender, birthdate, address, email ID, mobile number, place where you want to take the vaccine, vax administration date and lastly a unique vaccine appointment ID. Save the file in your local device.
-
-On the backend, your form data is deconstructed and a unique ID is generated. Using the individuals pieces of data and the ID, a document related to your appointment is created and saved in a MongoDB database. Then a PDF file with your appointment information is generated and saved in the filesystem. Once all this is done, you get redirected to your file from the form page.
+- Registers a user account with name, email and password 
+- Uses bcrypt to hash the password
+- Uses Passport's local strategy to authenticate the user 
+- Creates an appointment and saves it in the MongoDB database (One appointment for one user)
+- Generates an appointment PDF and saves it in the filesystem
+- Edits an appointment and regenerates the PDF
+- Allows the user to view and print the PDF
 
 ## How It Looks Like:
 ![VAS Register](https://github.com/nslcoder/vaccine-appointment-system/blob/main/screenshots/register.png)
